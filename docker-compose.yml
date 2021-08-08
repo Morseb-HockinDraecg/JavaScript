@@ -1,0 +1,13 @@
+services:
+  proj:
+    env_file: 
+      - ./.env
+    build: .
+    ports:
+      - '4000:4000'
+    volumes: 
+      - type: bind
+        source: ./
+        target: /app
+      - type: volume
+        target: /app/node_modules
