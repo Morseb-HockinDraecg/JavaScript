@@ -1,0 +1,9 @@
+services:
+  to-do:
+    env_file: 
+      - ./1. to-do list/.env
+    build: 
+      context: ./1. to-do list/
+      dockerfile: Dockerfile.prod
+    ports:
+      - '80:80'

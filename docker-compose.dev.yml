@@ -1,13 +1,15 @@
 services:
-  proj:
+  to-do:
     env_file: 
-      - ./.env
-    build: .
+      - ./1. to-do list/.env
+    build: 
+      context: ./1. to-do list/
+      dockerfile: Dockerfile.dev
     ports:
       - '4000:4000'
     volumes: 
       - type: bind
-        source: ./
+        source: ./1. to-do list/
         target: /app
       - type: volume
         target: /app/node_modules

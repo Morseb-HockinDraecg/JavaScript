@@ -1,0 +1,101 @@
+:root{
+  /* --primary: ./img/markus-winkler-Q2J2qQsoYH8-unsplash.jpg; */
+  --container: #95afc0;
+  --button: #c7ecee;
+  --li: #dff9fb;
+  --todo: #6ab04c;
+  --border1: #c7ecee;
+  --border2: #95afc0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1{
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline chartreuse;
+  }
+  
+  body {
+    background: url( ./img/stil-flRm0z3MEoA-unsplash.jpg) center center /cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+  width: 500px;
+  border: 1px solid var(--border1);
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container);
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 5px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: var(--button);
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+}
+
+input {
+  padding: 8px 15px;
+  outline: 0;
+  border: 1px solid var(--border1);
+  border-radius: 3px;
+}
+
+form input {
+  flex: 1;
+  margin-right: 15px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin: 5px 0;
+  background-color: var(--li);
+  border: 1px solid var(--border1);
+  border-radius: 10px;
+}
+
+li input{
+  flex: 1;
+  margin-right: 5px;
+}
+
+li p {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+li .todo {
+  flex: 0 0 20px;
+  height: 20px;
+  border-radius: 30px;
+  margin: 0 10px;
+  border: 2px solid var(--todo);
+}
+
+li .todo.done {
+  background: var(--todo);
+}
