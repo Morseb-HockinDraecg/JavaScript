@@ -7,3 +7,11 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - '80:80'
+  blog:
+    env_file: 
+      - ./2. blog/.env
+    build: 
+      context: ./2. blog/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '4000:4000'

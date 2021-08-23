@@ -1,6 +1,6 @@
 services:
   to-do:
-    env_file: 
+    env_file:
       - ./1. to-do list/.env
     build: 
       context: ./1. to-do list/
@@ -10,6 +10,20 @@ services:
     volumes: 
       - type: bind
         source: ./1. to-do list/
+        target: /app
+      - type: volume
+        target: /app/node_modules
+  blog:
+    env_file: 
+      - ./2. blog/.env
+    build: 
+      context: ./2. blog/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '4000:4000'
+    volumes:
+      - type: bind
+        source: ./2. blog/
         target: /app
       - type: volume
         target: /app/node_modules
