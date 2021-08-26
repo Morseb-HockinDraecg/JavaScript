@@ -8,17 +8,16 @@ Creating a Docker to have a nodeJS module and npm to install Babel and webpack
 
 The src folder of each project is share with the local and the docker so a modif in the docker change the local file too and vice-versa. Use for dev purpose only !
 
-|---> Script manag_docker.sh
-./manag_docker.sh => list images and containers
-./manag_docker.sh clear => delete ALL the exited container and images on the system
-./manag_docker.sh go [project nb] <dev> => launch the docker-compose of the [project nb], dev is optionnal, it is need to dev phase
+Once the docker has been launch you can go, in your browser to :
 
+- "localhost" for the prod phase
+- "localhost:4000" for the dev phase
 
-|---> Script go.sh
-Remplace by the docker-compose.yml
+|---> Script manag_docker.sh:  
+for details : ./manag_docker.sh info
 
-|---> to work in the container
+|---> to work in the container:  
 docker exec -it <container_name> sh
-|---> then
+|---> then :  
 npm run webpack
 npm start

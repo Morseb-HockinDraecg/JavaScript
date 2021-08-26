@@ -1,17 +1,23 @@
 services:
   to-do:
-    env_file: 
+    env_file:
       - ./1. to-do list/.env
-    build: 
+    build:
       context: ./1. to-do list/
       dockerfile: Dockerfile.prod
     ports:
-      - '80:80'
+      - "80:80"
   blog:
-    env_file: 
+    env_file:
       - ./2. blog/.env
-    build: 
+    build:
       context: ./2. blog/
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.prod
     ports:
-      - '4000:4000'
+      - "80:80"
+  snake:
+    build:
+      context: ./3. snake/
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"

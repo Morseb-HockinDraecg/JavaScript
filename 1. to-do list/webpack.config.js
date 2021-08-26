@@ -31,12 +31,12 @@ module.exports = {
   devtool: 'source-map',
   mode: 'development',
   devServer: {
-    // Needed for docker
-    host: '0.0.0.0',
     port: 4000,
     open: false,
     contentBase: path.resolve(__dirname, './dist'),
     inline: true,
+    // Needed for docker
+    host: '0.0.0.0',
     watchOptions: {
       aggregateTimeout: 500, // delay before reloading
       poll: 1000 // enable polling since fsevents are not supported in docker
